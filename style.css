@@ -1,0 +1,655 @@
+
+
+    /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .clearfix:after {
+          visibility: hidden;
+          display: block;
+          font-size: 0;
+          content: " ";
+          clear: both;
+          height: 0;
+        } 
+
+
+       .visuallyhidden:not(:focus):not(:active) {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          border: 0;
+          padding: 0;
+          white-space: nowrap;
+          clip-path: inset(100%);
+          clip: rect(0 0 0 0);
+          overflow: hidden;
+        }
+
+        img {
+		max-width:100%;
+        }
+
+   		/*----------STYLING STARTS HERE-----------*/
+
+
+		/*GLOBAL STYLES*/
+
+			
+		html {
+			font-size:62.5%; 
+		}
+
+		body {
+			font-family: 'Poppins', sans-serif;
+			font-size: 1.5rem;
+		}
+
+		.wrapper {
+			max-width:  950px;
+			margin: 0 auto; /*center on screen*/
+			border: 0px solid #000000;	
+			padding-left:40px;
+			padding-right:40px;
+		}
+
+
+		/*NAVIGATION STYLES*/
+
+
+		/*Fixed Header*/
+
+
+		.fixednavigation {
+			background: #ffffff;
+			color: #000000;
+			position:fixed;
+			border-bottom: 1px solid #000000;
+			width:100%;
+			z-index: 1;
+		}
+
+		.fixednav-flexContainer {
+			display: flex;
+		}
+
+		.logo {
+			margin-right:10px;
+			display:inline-block;
+			width:200px;
+			padding-top:10px;
+			padding-bottom:5px;
+		}
+
+		ul.menu {
+			flex: auto;
+			display: flex;
+			list-style: none;
+			justify-content: flex-end;
+		}
+
+		ul.menu li {
+			padding-top:15px;
+		}
+
+		ul.menu a {
+			color: #000000;
+			text-decoration: none;
+			text-transform: uppercase;
+			padding: 1em;
+			font-size: 1.25rem;
+			font-family: 'Poppins', sans-serif;
+			letter-spacing: 2px;
+		}
+
+		ul.menu a:hover {
+			color: #EEB013;
+		}
+
+
+		/* Responsive Design - Landscape phone to portrait tablet */
+		@media (max-width: 767px) {
+
+
+			.fixednavigation {
+				position:fixed;
+			}
+
+			.fixednav-flexContainer {
+				flex-direction: column;
+				text-align: center;
+			}
+
+			ul.menu {
+				flex-direction: column;
+				flex: 1 0 auto;
+				margin-bottom:0px;
+			}
+
+			ul.menu a {
+				padding: 25px 0;
+				display: inline-block;
+				width: 100%;
+			}
+
+			.logo {
+				flex: 1 0 auto;
+				margin-bottom:0px;
+			}
+
+			h1 {
+				display:inline-block;
+				margin-bottom:0px;
+			}
+
+/*			form input .search {
+				#margin-top:20px;
+			}*/
+
+		}
+
+
+		/*BANNER STYLES*/
+
+
+		header {
+			background-color: #ffffff;
+			padding-bottom:100px;
+			background-size:cover;
+			width:100%;
+		}
+
+
+		/*JAVASCRIPT FLICKITY CODE*/
+
+		.cell {
+			width:100%;
+			height:100vh;
+			font:40px;
+		}
+
+
+		/*MAIN SECTION STYLES*/
+
+
+		/*Repeated Styles*/
+
+
+		.sectionheader, .section2header, .section3header, .section4header, .section5header{
+			font-family: 'Poppins', sans-serif;
+			letter-spacing: 5px;
+
+		}
+
+		fieldset {
+			border:0px;
+		}
+
+
+		/*Section 1 Styles*/
+
+	
+		.sectionheader h3 {
+			color:#000000;
+			font-size: 2.0rem;
+			text-align:center;
+			font-weight: normal;
+			text-transform: uppercase;
+			width:200px;
+			display:block;
+			margin: 0 auto;
+			margin-bottom:60px;
+			margin-top:60px;
+			padding:10px;
+			border-bottom:2px solid #000000;
+		}
+
+		.section1-content {
+			margin:30px;
+			text-align: center;
+		}
+		
+		.flex-services-container {
+			display: flex;
+			justify-content: space-between;
+			margin:50px;
+		}
+
+		.flex-services-container1, .flex-services-container2, .flex-services-container3 {
+			margin-top:15px;
+			margin-bottom:15px;
+		}
+		
+		.flex-services-container img {
+			width:100%;
+			border-radius: 50%;
+			
+		}
+
+
+		/* Responsive Design - Landscape phone to portrait tablet */
+		@media (max-width: 767px) {
+
+
+			.flex-services-container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.flex-services-container1, .flex-services-container2, .flex-services-container3 {
+				margin-top:15px;
+				margin-bottom:15px;
+				margin:0 auto;
+				width:100%;
+				text-align: center;
+			}
+
+		}
+
+
+		/*Section 2 Styles*/
+
+		.section2background {
+			background-color:#EEB013;
+			padding:30px;
+		}
+
+		.section2-content {
+			padding:15px;
+			text-align: center;
+		}
+
+		.section2header h3 {
+			color:#141414;
+			font-size: 2.0rem;
+			text-align:center;
+			font-weight: normal;
+			text-transform: uppercase;
+			width:200px;
+			display:block;
+			margin: 0 auto;
+			margin-top:30px;
+			margin-bottom:60px;
+			padding:10px;
+			border-bottom:2px solid #000000;
+		}
+
+		.packages-container {
+			display:flex;
+			justify-content: space-around;
+		}
+
+		.packages-box {
+			margin:10px;
+			background-color:#ffffff;
+			text-align: center;
+			padding:20px;
+			transition: all 0.3s;
+			margin-bottom:30px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+		.packages-box:hover {
+    		transform: scale(1.02);
+    		background:#ffd800;
+		}
+
+		.packages-box p.packagetype {
+			color:#000000;
+			font-size:2rem;
+			font-weight: bold;
+		}
+	 
+		/* Responsive Design - Landscape phone to portrait tablet */
+		@media (max-width: 767px) {
+
+			.packages-container {
+				display:flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			.packages-box {
+				width:100%;
+				margin:10px;
+			}
+
+		}
+
+		/*Section 3 Styles*/
+
+		.section3background {
+			background-color:#ffffff;
+			padding:30px;
+		}
+
+		.section3-content {
+			padding:15px;
+			text-align: center;
+		}
+
+		.section3header h3 {
+			color:#141414;
+			font-size: 2.0rem;
+			text-align:center;
+			font-weight: normal;
+			text-transform: uppercase;
+			width:200px;
+			display:block;
+			margin: 0 auto;
+			margin-top:30px;
+			margin-bottom:60px;
+			padding:10px;
+			border-bottom:2px solid #000000;
+		}
+
+		.menu-container {
+			display:flex;
+			justify-content: space-around;
+		}
+
+		.menu-box {
+			width:50%;
+			margin:10px;
+		}
+
+		.sec3-menuitem {
+			color:#EEB013;
+		}
+
+		.sec3-menuitem-desc {
+			font-size:1.35rem;
+			color:#BBBBBB;
+		}
+
+		.sec3-menuitem span {
+			text-align:right;
+			color:#000000;
+			font-size: 2rem;
+		}
+
+
+		/* Responsive Design - Landscape phone to portrait tablet */
+		@media (max-width: 767px) {
+
+
+		.menu-container {
+				display:flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+		.menu-box {
+				width:100%;
+				margin:10px;
+				margin:0 auto;
+				text-align: center;
+			}
+
+		}
+
+
+		/*Section 4 Styles*/
+
+		.section4background {
+			background-image:linear-gradient( to top, rgba(255,255,255,.5),  rgba(255,255,255,.5) ), url(assets/travel_roadoverhead.png);
+			background-repeat: no-repeat;
+			background-color:#EEB013;
+			padding:30px;
+		}
+
+		.section4-content {
+			padding:15px;
+			text-align: center;
+		}
+
+		.section4header h3 {
+			color:#141414;
+			font-size: 2.0rem;
+			text-align:center;
+			font-weight: normal;
+			text-transform: uppercase;
+			width:200px;
+			display:block;
+			margin: 0 auto;
+			margin-top:30px;
+			margin-bottom:60px;
+			padding:10px;
+			border-bottom:2px solid #000000;
+			font-family: 'Poppins', sans-serif;
+		}
+	 
+/*	 	input {
+	 		border: 0px;
+	 	}*/
+
+	 	form .submit {
+	 		border: 0px;
+			background-color:#000000;
+			color:#ffffff;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: 1.25rem;
+			padding:15px;
+			margin-top:20px;
+	 	}
+
+		form .submit:hover {
+    		background:#ffd800;
+    		color:#000000;
+		}
+
+		/* Responsive Design - Landscape phone to portrait tablet */
+		@media (max-width: 767px) {
+
+
+		}
+
+		/*Section 5 Styles*/
+
+		.section5background {
+			background-color:#ffffff;
+			padding:30px;
+		}
+
+		.section5header h3 {
+			color:#141414;
+			font-size: 2.0rem;
+			text-align:center;
+			font-weight: normal; 
+			text-transform: uppercase;
+			width:200px;
+			display:block;
+			margin: 0 auto;
+			margin-top:30px;
+			margin-bottom:60px;
+			padding:10px;
+			border-bottom:2px solid #000000;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		.section5-quote {
+			font-size: 4rem;
+			text-align:center;
+			letter-spacing: 4px;
+		}
+
+		.section5-quoteauthor {
+			font-size:2rem;
+			text-align: center;
+			color:#EEB013;
+			margin-bottom:40px;
+		}
+
+
+		/*FOOTER STYLES*/
+
+
+		footer {
+			padding-top: 40px;
+			max-width: 100%;
+			background-color: #EEB013;
+		}
+
+		footer img {
+			text-align:center;
+		}
+
+		footer a {
+      		color:#000000;
+      		text-decoration: none;
+		}
+
+		footer a:hover {
+      		color:#ffffff;
+      		text-decoration: none;
+		}
+
+		.footerheader {
+			font-size:2rem;
+			color:#000000;
+			text-transform: uppercase;
+			font-family: 'Poppins', sans-serif;
+			border-bottom:1px solid #000000;
+			letter-spacing: 5px;
+		}
+
+		.flex-bottom-nav-columns {
+			display:flex;
+			flex-direction: row;
+			justify-content: space-between;
+			color:#ffffff;
+			font-size:1.35rem;
+		}
+
+		.bottom-nav-col1, .bottom-nav-col2, .bottom-nav-col3 {
+			margin:10px;
+			width:33.3%;
+		}
+
+		.flex-nav-col2-container {
+			display:flex;
+			color: #ffffff;
+		}
+
+
+		.flex-nav-col2-item1 {
+			width:20%;
+			margin-bottom:20px;
+		}
+
+		.flex-nav-col2-item2 {
+			width:80%;
+			margin-bottom:20px;
+		}
+
+		.flex-nav-col2-item2 p {
+			margin:0px;
+		}
+
+		.latestposts-month {
+			color:#000000;
+			font-size:1.2rem;
+			padding-top:10px;
+		}
+
+    	.mailinglist-text {
+    		color:#000000;
+    		text-transform: uppercase;
+    		font-weight: bold;
+    	}
+
+    	.email {
+	        padding:10px;
+	        border:1px solid #ffffff;
+	        width:60%;
+	        border-radius: 10px;
+	        float:left;
+    	}
+
+    	.inputEmailButton {
+    		margin-left:5px;
+    		padding:10px;
+    		width:30%;
+    		border:1px solid #ffffff;
+	        border-radius: 10px;
+    	}
+
+		.bottom-nav {
+			float:left;
+		}
+
+		.copyright {
+			color:#000000;
+			clear:left;
+			font-size: 1.2rem;
+			font-weight: normal;
+			width:85%;
+			padding-top: 17px;
+			padding-left:10px;
+		}
+
+		.footer-icons {
+			float:left;
+			width:15%;
+		}
+
+
+		/* Responsive Design - Landscape phone to portrait tablet */
+		@media (max-width: 767px) {
+
+			.flex-bottom-nav-columns {
+				display:flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			.bottom-nav-col1, .bottom-nav-col2, .bottom-nav-col3 {
+				margin:10px;
+				width:100%;
+			}
+
+			.flex-nav-col2-item1 {
+				width:20%;
+				margin-bottom:20px;
+			}
+
+			.flex-nav-col2-item1 {
+				width:7%;
+			}
+
+		}
+
+		
+		/*-----Footer Icons-----*/
+
+
+		footer div.footer-icons ul {
+			list-style: none;
+			padding: 0;
+			float:right;
+		}
+
+		footer div.footer-icons ul li {
+			float: left;
+			width: auto;
+		}
+
+		footer div.footer-icons a {
+			text-decoration: none;
+			color: #FFFFFF;
+			padding-right: 12px;
+			font-size: 1.1rem;
+		}
+
+		footer div.footer-icons a:hover {
+			color: #000000;
+		}
+
+
+
+
